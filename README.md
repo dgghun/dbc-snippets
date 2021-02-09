@@ -1,7 +1,7 @@
 # dbc-snippets
 DB/C programming language snippets for VS Code.
 
-# Install Snippets (Code Auto Complete)
+# Install Snippets (Code Auto Completition)
 * Clone or copy this repository folder ```dnc-snippets``` into your ```.vscode/extensions``` folder.
 * In VS Code, go to ```File -> Preferences -> User Snippets``` and select the ```dbc-snippets``` to start using it.
 
