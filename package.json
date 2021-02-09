@@ -3,7 +3,7 @@
     "publisher": "David-Garcia",
     "displayName": "dbc-snippets",
     "description": "Snippets for DBC",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "vscode": "^1.53.0"
     },
@@ -11,15 +11,27 @@
         "type": "git",
         "url": "https://github.com/dgghun/dbc-snippets.git"
     },
-    "categories": [
-        "Snippets"
-    ],
+    "categories": ["Programming Languages", "Snippets"],
     "contributes": {
+        "languages": [
+            {
+                "id": "dbc",
+                "aliases": ["DBC", "dbc"],
+                "extensions": [".DGG",".TXT",".DEF",".VRB",".DAV",".GLE",".GWS",".AJS",".MAG"],
+                "configuration": "./language-configuration.json"
+            }
+          ],
+          "grammars": [
+            {
+                "language": "dbc",
+                "scopeName": "DBC",
+                "path": "./syntaxes/dbc.tmLanguage.json"
+            }
+          ],
         "snippets": [
             {
                 "language": "dbc",
                 "aliases": ["DBC", "dbc"],
-                "extensions": [".DGG",".TXT",".DEF",".VRB",".DAV",".GLE",".GWS",".AJS",".MAG"],
                 "path": "./snippets/snippets.code-snippets"
             }
         ]
