@@ -1,0 +1,22 @@
+{
+    "name": "dbc-snippets",
+    "displayName": "dbc-snippets",
+    "description": "Snippets for DBC",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.53.0"
+    },
+    "categories": [
+        "Snippets"
+    ],
+    "contributes": {
+        "snippets": [
+            {
+                "language": "dbc",
+                "aliases": ["DBC", "dbc"],
+                "extensions": [".DGG",".TXT",".DEF",".VRB",".DAV",".GLE",".GWS",".AJS",".MAG"],
+                "path": "./snippets/snippets.code-snippets"
+            }
+        ]
+    }
+}

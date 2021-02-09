@@ -1,0 +1,96 @@
+{
+    // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+    // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+    // is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+    // used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+    // Placeholders with the same ids are connected.
+    // Example:
+    // "Print to console": {
+    // 	"scope": "javascript,typescript",
+    // 	"prefix": "log",
+    // 	"body": [
+    // 		"console.log('$1');",
+    // 		"$2"
+    // 	],
+    // 	"description": "Log output to console"
+    // }
+    "A for loop": {
+        "scope": "dbc,DBC",
+        "prefix": [
+            "FOR"
+        ],
+        "body": [
+            "FOR  ${0:index} FROM ${1:START} TO ${2:END}",
+            "REPEAT"
+        ],
+        "description": "A FOR LOOP statement"
+    },
+    "A loop": {
+        "scope": "dbc,DBC",
+        "prefix": [
+            "LOOP"
+        ],
+        "body": [
+            "LOOP",
+            " BREAK",
+            "REPEAT"
+        ],
+        "description": "A LOOP statement"
+    },
+    "Routine statement with no arguments": {
+        "scope": "dbc,DBC",
+        "prefix": [
+            "ROUTINE-no-args",
+            "routine-no-args"
+        ],
+        "body": [
+            ". *******************************************************************************",
+            ".",
+            ". ${1:Routine description}",
+            ".",
+            ". *******************************************************************************",
+            "${0:routine}",
+            "          RETURN                                        exit routine"
+        ],
+        "description": "Basic routine statement with no arguments."
+    },
+    "A if statement": {
+        "scope": "dbc,DBC",
+        "prefix": [
+            "IF"
+        ],
+        "body": [
+            "IF ()",
+            " $dothis",
+            "ENDIF"
+        ],
+        "description": "A IF statement"
+    },
+    "A if else statement": {
+        "scope": "dbc,DBC",
+        "prefix": [
+            "IF ELSE"
+        ],
+        "body": [
+            "IF ()",
+            " ${0:do this}",
+            "ELSE",
+            " ${1:do this}",
+            "ENDIF"
+        ],
+        "description": "A IF ELSE statement"
+    },
+    "A switch statement": {
+        "scope": "dbc,DBC",
+        "prefix": [
+            "SWITCH"
+        ],
+        "body": [
+            "SWITCH    ${0:argument}",
+            "CASE      ${1:case1}",
+            "ENDSWITCH"
+        ],
+        "description": "A IF statement"
+    }
+}
