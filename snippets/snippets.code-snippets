@@ -166,6 +166,6 @@
             "${1|DIV,DIVIDE|}    $num1 IN $num2 GIVING $numdest"
         ],
         "description": ""
-    },
+    }
 
 }
