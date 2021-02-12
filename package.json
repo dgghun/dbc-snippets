@@ -3,7 +3,7 @@
     "publisher": "David-Garcia",
     "displayName": "dbc-snippets",
     "description": "Snippets and Syntax Highlighting for DBC",
-    "version": "0.0.6",
+    "version": "0.0.7",
     "engines": {
         "vscode": "^1.53.0"
     },
