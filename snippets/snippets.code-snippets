@@ -22,7 +22,24 @@
         "prefix": ["LOOP"],
         "body": [
             "LOOP",
-            " BREAK",
+            "REPEAT"
+        ],
+        "description": ""
+    },
+    "A LOOP WHILE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOOP WHILE"],
+        "body": [
+            "LOOP WHILE $condition",
+            "REPEAT"
+        ],
+        "description": ""
+    },
+    "A LOOP UNTIL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOOP UNTIL"],
+        "body": [
+            "LOOP UNTIL $condition",
             "REPEAT"
         ],
         "description": ""
@@ -123,14 +140,6 @@
             "ADD    $num1 TO $num2 GIVING $numdest"
         ],
         "description": "Add giving statement"
-    },
-    "AND dbc statement": {
-        "scope": "dbc,DBC",
-        "prefix": ["AND"],
-        "body": [
-            "AND    $var1 WITH $var2"
-        ],
-        "description": "AND statement"
     },
     "APPEND dbc statement": {
         "scope": "dbc,DBC",
@@ -241,22 +250,6 @@
         "prefix": ["AND"],
         "body": [
         "AND    $source TO $dest"
-        ],
-        "description": "" 
-    },
-    "A LCMOVE dbc statement": {
-        "scope": "dbc,DBC",
-        "prefix": ["LCMOVE"],
-        "body": [
-        "LCMOVE    $source TO $dest"
-        ],
-        "description": "" 
-    },
-    "A LENSET dbc statement": {
-        "scope": "dbc,DBC",
-        "prefix": ["LENSET"],
-        "body": [
-        "LENSET    $charvar"
         ],
         "description": "" 
     },
@@ -705,6 +698,422 @@
         "prefix": ["GETLABEL"],
         "body": [
         "GETLABEL    $charexp TO $destlbl"
+        ],
+        "description": "" 
+    },
+    "A GETMODULES dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETMODULES"],
+        "body": [
+        "GETMODULES    $chararray"
+        ],
+        "description": "" 
+    },
+    "A GETNAME dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETNAME"],
+        "body": [
+        "GETNAME    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A GETOBJECT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETOBJECT"],
+        "body": [
+        "GETOBJECT    $adrvar"
+        ],
+        "description": "" 
+    },
+    "A GETPAPERBINS dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETPAPERBINS"],
+        "body": [
+        "GETPAPERBINS    $source, $dest_array"
+        ],
+        "description": "" 
+    },
+    "A GETPAPERNAMES dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETPAPERNAMES"],
+        "body": [
+        "GETPAPERNAMES    $source, $dest_array"
+        ],
+        "description": "" 
+    },
+    "A GETPARM dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETPARM"],
+        "body": [
+        "GETPARM    $keyword_dest"
+        ],
+        "description": "" 
+    },
+    "A GETPARM with typeless dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETPARM-with-typeless"],
+        "body": [
+        "GETPARM    $keyword_dest, $typeless_var"
+        ],
+        "description": "" 
+    },
+    "A GETPRINTERS dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETPRINTERS"],
+        "body": [
+        "GETPRINTERS    $chararray"
+        ],
+        "description": "" 
+    },
+    "A GOTO dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GOTO"],
+        "body": [
+        "GOTO    $prog-label"
+        ],
+        "description": "" 
+    },
+    "A HIDE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["HIDE"],
+        "body": [
+        "HIDE    $res_image"
+        ],
+        "description": "" 
+    },
+    "An INSERT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["INSERT"],
+        "body": [
+        "INSERT    $ifile_afile"
+        ],
+        "description": "" 
+    },
+    "An INSERT with key dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["INSERT-with-key"],
+        "body": [
+        "INSERT    $ifile_afile, $key"
+        ],
+        "description": "" 
+    },
+    "A KEYIN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["KEYIN"],
+        "body": [
+        "KEYIN    $var"
+        ],
+        "description": "" 
+    },
+    "A LCMOVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LCMOVE"],
+        "body": [
+        "LCMOVE    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A LENSET dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LENSET"],
+        "body": [
+        "LENSET    $charvar"
+        ],
+        "description": "" 
+    },
+    "A LINK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LINK"],
+        "body": [
+        "LINK    $res_device TO $queue_var"
+        ],
+        "description": "" 
+    },
+    "A LOAD dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOAD"],
+        "body": [
+        "LOAD    $dest WITH $index OF $source_list"
+        ],
+        "description": "" 
+    },
+    "A LOAD device dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOAD-device"],
+        "body": [
+        "LOAD    $charvar_image WITH $device"
+        ],
+        "description": "" 
+    },
+    "A LOADADR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOADADR"],
+        "body": [
+        "LOADADR    $adrvar WITH $index OF $list"
+        ],
+        "description": "" 
+    },
+    "A LOADLABEL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOADLABEL"],
+        "body": [
+        "LOADLABEL    $lblvar WITH $index OF $list"
+        ],
+        "description": "" 
+    },
+    "A LOADMOD dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOADMOD"],
+        "body": [
+        "LOADMOD    $charexp"
+        ],
+        "description": "" 
+    },
+    "A LOADPARM dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOADPARM"],
+        "body": [
+        "LOADPARM    $numvar IN $keydest"
+        ],
+        "description": "" 
+    },
+    "A LOADPARM with typeless dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOADPARM-with-typeless"],
+        "body": [
+        "LOADPARM    $numvar IN $keydest WITH $typeless_var"
+        ],
+        "description": "" 
+    },
+    "A MAKE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MAKE"],
+        "body": [
+        "MAKE    $objvar FROM $class "
+        ],
+        "description": "" 
+    },
+    "A MAKE list form dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MAKE-list-form"],
+        "body": [
+        "MAKE    $objvar FROM $class WITH $list"
+        ],
+        "description": "" 
+    },
+    "A MAKEGLOBAL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MAKEGLOBAL"],
+        "body": [
+        "MAKEGLOBAL    \"${1:Name}:${2|Type,C,N,D,R,I,O|}${3:Size}\" TO ${4:destadr}"
+        ],
+        "description": "" 
+    },
+    "A MAKEVAR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MAKEVAR"],
+        "body": [
+        "MAKEVAR    \"${1|Type,C,N,D,R,I,O|}${2:Size}\" TO ${3:destadr}"
+        ],
+        "description": "" 
+    },
+    "A MATCH dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MATCH"],
+        "body": [
+        "MATCH    $source WITH $dest"
+        ],
+        "description": "" 
+    },
+    "An ABS dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["ABS"],
+        "body": [
+        "ABS    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "An ARCCOS dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["ARCCOS"],
+        "body": [
+        "ARCCOS    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "An ARCTAN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["ARCTAN"],
+        "body": [
+        "ARCTAN    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A COS dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COS"],
+        "body": [
+        "COS    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "An EXP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["EXP"],
+        "body": [
+        "EXP    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A LOG dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOG"],
+        "body": [
+        "LOG    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A LOG10 dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LOG10"],
+        "body": [
+        "LOG10    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A POWER dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["POWER"],
+        "body": [
+        "POWER    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A SIN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SIN"],
+        "body": [
+        "SIN    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A SQRT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SQRT"],
+        "body": [
+        "SQRT    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A TAN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TAN"],
+        "body": [
+        "TAN    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A MOD dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOD"],
+        "body": [
+        "MOD    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A MOD GIVING dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOD-giving"],
+        "body": [
+        "MOD    $source1 IN $source2 GIVING $dest"
+        ],
+        "description": "" 
+    },
+    "A MOVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVE"],
+        "body": [
+        "MOVE    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A MOVEADR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVEADR"],
+        "body": [
+        "MOVEADR    $source TO $destadr"
+        ],
+        "description": "" 
+    },
+    "A MOVEFPTR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVEFPTR"],
+        "body": [
+        "MOVEFPTR    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A MOVELABEL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVELABEL"],
+        "body": [
+        "MOVELABEL    $sourcelbl TO $destlbl"
+        ],
+        "description": "" 
+    },
+    "A MOVELENGTH dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVELENGTH"],
+        "body": [
+        "MOVELENGTH $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A MOVELPTR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVELPTR"],
+        "body": [
+        "MOVELPTR    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A MOVELV dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVELV"],
+        "body": [
+        "MOVELV    $sourcelbl TO $destlbl"
+        ],
+        "description": "" 
+    },
+    "A MOVESIZE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVESIZE"],
+        "body": [
+        "MOVESIZE    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A MOVEVL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MOVEVL"],
+        "body": [
+        "MOVEVL    $source TO $destlbl"
+        ],
+        "description": "" 
+    },
+    "A MULTIPLY dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MULTIPLY"],
+        "body": [
+        "${1|MULTIPLY,MULT|}    ${2:source} IN ${3:dest}"
+        ],
+        "description": "" 
+    },
+    "A MULTIPLY with giving dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["MULTIPLY-with-giving"],
+        "body": [
+        "${1|MULTIPLY,MULT|}    ${2:source1} IN ${3:source2} GIVING ${4:dest}"
         ],
         "description": "" 
     }
