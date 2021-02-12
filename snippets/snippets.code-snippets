@@ -1,26 +1,31 @@
 {
     "A FOR LOOP dbc statement": {
         "scope": "dbc,DBC",
-        "prefix": [
-            "FOR"
-        ],
+        "prefix": ["FOR"],
         "body": [
             "FOR  $index FROM $start TO $end",
             "REPEAT"
         ],
-        "description": "A FOR LOOP statement"
+        "description": ""
+    },
+    "A FOR LOOP with increment variable dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["FOR-with-increment"],
+        "body": [
+            "FOR  $index FROM $start TO $end BY $increment",
+            "REPEAT"
+        ],
+        "description": ""
     },
     "A LOOP dbc statement": {
         "scope": "dbc,DBC",
-        "prefix": [
-            "LOOP"
-        ],
+        "prefix": ["LOOP"],
         "body": [
             "LOOP",
             " BREAK",
             "REPEAT"
         ],
-        "description": "A LOOP statement"
+        "description": ""
     },
     "ROUTINE dbc statement with no arguments": {
         "scope": "dbc,DBC",
@@ -166,6 +171,541 @@
             "${1|DIV,DIVIDE|}    $num1 IN $num2 GIVING $numdest"
         ],
         "description": ""
+    },
+    "An EDIT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["EDIT"],
+        "body": [
+            "EDIT    $mask IN $vardest"
+        ],
+        "description": ""
+    },
+    "An EDIT GIVING dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["EDIT GIVING"],
+        "body": [
+            "EDIT    $mask IN $edit_mask GIVING $vardest"
+        ],
+        "description": ""
+    },
+    "A FILL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["FILL"],
+        "body": [
+            "FILL    $this IN $here"
+        ],
+        "description": ""
+    },
+    "A FLAGRESTORE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["FLAGRESTORE"],
+        "body": [
+            "FLAGRESTORE    $charexp"
+        ],
+        "description": ""
+    },
+    "A FLAGSAVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["FLAGSAVE"],
+        "body": [
+            "FLAGSAVE    $charvar"
+        ],
+        "description": ""
+    },
+    "A FORMAT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["FORMAT"],
+        "body": [
+            "FORMAT    $source IN $mask GIVING $vardest"
+        ],
+        "description": ""
+    },
+    "A GETPOSITION dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETPOSITION"],
+        "body": [
+            "GETPOSITION    $image; $num_horz_pos, $num_vert_pos"
+        ],
+        "description": ""
+    },
+    "A GETWINDOW dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETWINDOW"],
+        "body": [
+            "GETWINDOW    $num_top, $num_bottom, $num_left, $num_right"
+        ],
+        "description": ""
+    },
+    "An AND dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["AND"],
+        "body": [
+        "AND    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A LCMOVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LCMOVE"],
+        "body": [
+        "LCMOVE    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A LENSET dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["LENSET"],
+        "body": [
+        "LENSET    $charvar"
+        ],
+        "description": "" 
+    },
+    "A BEEP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["BEEP"],
+        "body": [
+        "BEEP"
+        ],
+        "description": "" 
+    },
+    "A BUMP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["BUMP"],
+        "body": [
+        "BUMP    $charvar BY $bump_cnt"
+        ],
+        "description": "" 
+    },
+    "A CALL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CALL"],
+        "body": [
+        "CALL    $prog-label"
+        ],
+        "description": "" 
+    },
+    "A CCALL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CCALL"],
+        "body": [
+        "CCALL    $charexp"
+        ],
+        "description": "" 
+    },
+    "A CHAIN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHAIN"],
+        "body": [
+        "CHAIN    $charexp"
+        ],
+        "description": "" 
+    },
+    "A CHANGE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHANGE"],
+        "body": [
+        "CHANGE    $resource_device, $charexp"
+        ],
+        "description": "" 
+    },
+    "A CHARRESTORE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHARRESTORE"],
+        "body": [
+        "CHARRESTORE    $charexp"
+        ],
+        "description": "" 
+    },
+    "A CHARSAVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHARSAVE"],
+        "body": [
+        "CHARSAVE    $charexp"
+        ],
+        "description": "" 
+    },
+    "A CHECK10 dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHECK10"],
+        "body": [
+        "CHECK10    $source IN $charexp"
+        ],
+        "description": "" 
+    },
+    "A CHECK10 GIVING dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHECK10 GIVING"],
+        "body": [
+        "CHECK10    $source IN $charexp, $dest"
+        ],
+        "description": "" 
+    },
+    "A CHECK11 dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHECK11"],
+        "body": [
+        "CHECK11    $source IN $charexp"
+        ],
+        "description": "" 
+    },
+    "A CHECK11 GIVING dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHECK11 GIVING"],
+        "body": [
+        "CHECK11    $source IN $charexp, $dest"
+        ],
+        "description": "" 
+    },
+    "A CHOP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CHOP"],
+        "body": [
+        "CHOP    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A CLEAR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CLEAR"],
+        "body": [
+        "CLEAR    $var"
+        ],
+        "description": "" 
+    },
+    "A CLEARADR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CLEARADR"],
+        "body": [
+        "CLEARADR    $adrvar"
+        ],
+        "description": "" 
+    },
+    "A CLEARENDKEY dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CLEARENDKEY"],
+        "body": [
+        "CLEARENDKEY    $var"
+        ],
+        "description": "" 
+    },
+    "A CLEARLABEL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CLEARLABEL"],
+        "body": [
+        "CLEARLABEL    $lblvar"
+        ],
+        "description": "" 
+    },
+    "A CLOSE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CLOSE"],
+        "body": [
+        "CLOSE    $file"
+        ],
+        "description": "" 
+    },
+    "A CLOSE MODE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CLOSE-mode"],
+        "body": [
+        "CLOSE    $file, $mode"
+        ],
+        "description": "" 
+    },
+    "A CLOSEALL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CLOSEALL"],
+        "body": [
+        "CLOSEALL    "
+        ],
+        "description": "" 
+    },
+    "A CMATCH dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CMATCH"],
+        "body": [
+        "CMATCH    $charvarlit WITH $charvarlit    "
+        ],
+        "description": "" 
+    },
+    "A CMOVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CMOVE"],
+        "body": [
+        "CMOVE    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A COMCLR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COMCLR"],
+        "body": [
+        "COMCLR    $comfile"
+        ],
+        "description": "" 
+    },
+    "A COMCTL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COMCTL"],
+        "body": [
+        "COMCTL    $comfile, $charvar"
+        ],
+        "description": "" 
+    },
+    "A COMOPEN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COMOPEN"],
+        "body": [
+        "COMOPEN    $comfile, $charvar"
+        ],
+        "description": "" 
+    },
+    "A COMCLOSE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COMCLOSE"],
+        "body": [
+        "COMCLOSE    $comfile"
+        ],
+        "description": "" 
+    },
+    "A COMPARE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COMPARE"],
+        "body": [
+        "COMPARE    $num1 TO $num2"
+        ],
+        "description": "" 
+    },
+    "A COMPAREADR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COMPAREADR"],
+        "body": [
+        "COMPAREADR    $adrvar1 TO $adrvar2"
+        ],
+        "description": "" 
+    },
+    "A COMTST dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COMTST"],
+        "body": [
+        "COMTST    $comfile"
+        ],
+        "description": "" 
+    },
+    "A COMWAIT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["COMWAIT"],
+        "body": [
+        "COMWAIT    $comfile"
+        ],
+        "description": "" 
+    },
+    "A CONSOLE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CONSOLE"],
+        "body": [
+        "CONSOLE    $list"
+        ],
+        "description": "" 
+    },
+    "A DEBUG dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["DEBUG"],
+        "body": [
+        "DEBUG"
+        ],
+        "description": "" 
+    },
+    "A DELETE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["DELETE"],
+        "body": [
+        "DELETE    $file"
+        ],
+        "description": "" 
+    },
+    "A DELETE ifile dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["DELETE-ifile"],
+        "body": [
+        "DELETE    $ifile, $key"
+        ],
+        "description": "" 
+    },
+    "A DELETEK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["DELETEK"],
+        "body": [
+        "DELETEK    $ifile, $key"
+        ],
+        "description": "" 
+    },
+    "A DESTROY dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["DESTROY"],
+        "body": [
+        "DESTROY    $objvar"
+        ],
+        "description": "" 
+    },
+    "A DISABLE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["DISABLE"],
+        "body": [
+        "DISABLE"
+        ],
+        "description": "" 
+    },
+    "A DISPLAY dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["DISPLAY"],
+        "body": [
+        "DISPLAY    $list"
+        ],
+        "description": "" 
+    },
+    "A DRAW dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["DRAW"],
+        "body": [
+        "DRAW    $image; $list"
+        ],
+        "description": "" 
+    },
+    "A EMPTY dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["EMPTY"],
+        "body": [
+        "EMPTY    $list"
+        ],
+        "description": "" 
+    },
+    "A ENABLE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["ENABLE"],
+        "body": [
+        "ENABLE"
+        ],
+        "description": "" 
+    },
+    "A ENDSET dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["ENDSET"],
+        "body": [
+        "ENDSET    $charvar"
+        ],
+        "description": "" 
+    },
+    "A ERASE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["ERASE"],
+        "body": [
+        "ERASE    $filename"
+        ],
+        "description": "" 
+    },
+    "A EXECUTE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["EXECUTE"],
+        "body": [
+        "EXECUTE    $charexp"
+        ],
+        "description": "" 
+    },
+    "A EXTEND dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["EXTEND"],
+        "body": [
+        "EXTEND    $charvar"
+        ],
+        "description": "" 
+    },
+    "A EXTEND with count dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["EXTEND-with-count"],
+        "body": [
+        "EXTEND    $charvar BY $cnt"
+        ],
+        "description": "" 
+    },
+    "A EXTERNAL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["EXTERNAL"],
+        "body": [
+        "EXTERNAL "
+        ],
+        "description": "" 
+    },
+    "A FILEPI dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["FILEPI"],
+        "body": [
+        "FILEPI    $decnum; $list"
+        ],
+        "description": "" 
+    },
+    "A FLUSHEOF dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["FLUSHEOF"],
+        "body": [
+        "FLUSHEOF    $file"
+        ],
+        "description": "" 
+    },
+    "A FPOSIT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["FPOSIT"],
+        "body": [
+        "FPOSIT    $file, $dest"
+        ],
+        "description": "" 
+    },
+    "A GET dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GET"],
+        "body": [
+        "GET    $queue_var; $list"
+        ],
+        "description": "" 
+    },
+    "A GETCOLOR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETCOLOR"],
+        "body": [
+        "GETCOLOR    $image; $dest"
+        ],
+        "description": "" 
+    },
+    "A GETCURSOR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETCURSOR"],
+        "body": [
+        "GETCURSOR    $num_horz_pos, $num_vert_pos"
+        ],
+        "description": "" 
+    },
+    "A GETENDKEY dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETENDKEY"],
+        "body": [
+        "GETENDKEY    $numvar"
+        ],
+        "description": "" 
+    },
+    "A GETGLOBAL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETGLOBAL"],
+        "body": [
+        "GETGLOBAL    $charexp TO $destadr"
+        ],
+        "description": "" 
+    },
+    "A GETLABEL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["GETLABEL"],
+        "body": [
+        "GETLABEL    $charexp TO $destlbl"
+        ],
+        "description": "" 
     }
-
 }
