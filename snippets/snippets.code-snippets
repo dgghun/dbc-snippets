@@ -113,6 +113,7 @@
         "body": [
             "SWITCH    $argument",
             "CASE      $case1",
+            "DEFAULT         ",
             "ENDSWITCH"
         ],
         "description": "A IF statement"
@@ -1114,6 +1115,891 @@
         "prefix": ["MULTIPLY-with-giving"],
         "body": [
         "${1|MULTIPLY,MULT|}    ${2:source1} IN ${3:source2} GIVING ${4:dest}"
+        ],
+        "description": "" 
+    },
+    "A NFORMAT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["NFORMAT"],
+        "body": [
+        "NFORMAT    $dest WITH $leftdec,$rightdec"
+        ],
+        "description": "" 
+    },
+    "A NOEJECT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["NOEJECT"],
+        "body": [
+        "NOEJECT"
+        ],
+        "description": "" 
+    },
+    "A NORETURN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["NORETURN"],
+        "body": [
+        "NORETURN"
+        ],
+        "description": "" 
+    },
+    "A NOT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["NOT"],
+        "body": [
+        "NOT    $source WITH $dest"
+        ],
+        "description": "" 
+    },
+    "An OPEN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["OPEN"],
+        "body": [
+        "OPEN    $file_dev, $file_dev_name"
+        ],
+        "description": "" 
+    },
+    "An OR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["OR"],
+        "body": [
+        "OR    $source WITH $dest"
+        ],
+        "description": "" 
+    },
+    "A PACK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PACK"],
+        "body": [
+        "PACK    $dest WITH $list"
+        ],
+        "description": "" 
+    },
+    "A PACKLEN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PACKLEN"],
+        "body": [
+        "PACKLEN    $dest WITH $list"
+        ],
+        "description": "" 
+    },
+    "A PAUSE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PAUSE"],
+        "body": [
+        "PAUSE    $num"
+        ],
+        "description": "" 
+    },
+    "A PERFORM dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PERFORM"],
+        "body": [
+        "PERFORM    $numindex OF $list_lblvars"
+        ],
+        "description": "" 
+    },
+    "A PLOADMOD dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PLOADMOD"],
+        "body": [
+        "PLOADMOD    $source"
+        ],
+        "description": "" 
+    },
+    "A POPRETURN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["POPRETURN"],
+        "body": [
+        "POPRETURN    $lblvar"
+        ],
+        "description": "" 
+    },
+    "A PREPARE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PREPARE"],
+        "body": [
+        "PREPARE    $file_dev, $file_dev_name"
+        ],
+        "description": "" 
+    },
+    "A PREP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PREP"],
+        "body": [
+        "PREP    $file_dev, $file_dev_name"
+        ],
+        "description": "" 
+    },
+    "A PRINT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PRINT"],
+        "body": [
+        "PRINT    $list"
+        ],
+        "description": "" 
+    },
+    "A PUSHRETURN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PUSHRETURN"],
+        "body": [
+        "PUSHRETURN    $prog-label_lbvar"
+        ],
+        "description": "" 
+    },
+    "A PUT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PUT"],
+        "body": [
+        "PUT    $queue_var; $list"
+        ],
+        "description": "" 
+    },
+    "A PUTFIRST dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["PUTFIRST"],
+        "body": [
+        "PUTFIRST    $queue_var; $list"
+        ],
+        "description": "" 
+    },
+    "A QUERY dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["QUERY"],
+        "body": [
+        "QUERY    $res_device, $charexp; $list"
+        ],
+        "description": "" 
+    },
+    "A READ dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READ"],
+        "body": [
+        "READ    $file, $num_key; $list"
+        ],
+        "description": "" 
+    },
+    "A READGPLK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READGPLK"],
+        "body": [
+        "READGPLK    $afile; $list"
+        ],
+        "description": "" 
+    },
+    "A READKG dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READKG"],
+        "body": [
+        "READKG    $afile; $list"
+        ],
+        "description": "" 
+    },
+    "A READKGLK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READKGLK"],
+        "body": [
+        "READKGLK    $afile; $list"
+        ],
+        "description": "" 
+    },
+    "A READKGP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READKGP"],
+        "body": [
+        "READKGP    $afile; $list"
+        ],
+        "description": "" 
+    },
+    "A READKP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READKP"],
+        "body": [
+        "READKP    $ifile; $list"
+        ],
+        "description": "" 
+    },
+    "A READKPLK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READKPLK"],
+        "body": [
+        "READKPLK    $ifile; $list"
+        ],
+        "description": "" 
+    },
+    "A READKS dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READKS"],
+        "body": [
+        "READKS    $ifile; $list"
+        ],
+        "description": "" 
+    },
+    "A READKSLK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READKSLK"],
+        "body": [
+        "READKSLK    $ifile; $list"
+        ],
+        "description": "" 
+    },
+    "A READLK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["READLK"],
+        "body": [
+        "READLK    $file, $num_key; $list"
+        ],
+        "description": "" 
+    },
+    "A RECV dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RECV"],
+        "body": [
+        "RECV    $comfile, $numvar; $list"
+        ],
+        "description": "" 
+    },
+    "A RECVCLR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RECVCLR"],
+        "body": [
+        "RECVCLR    $comfile"
+        ],
+        "description": "" 
+    },
+    "A RELEASE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RELEASE"],
+        "body": [
+        "RELEASE"
+        ],
+        "description": "" 
+    },
+    "A RENAME dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RENAME"],
+        "body": [
+        "RENAME    $old TO $new"
+        ],
+        "description": "" 
+    },
+    "A REPLACE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["REPLACE"],
+        "body": [
+        "REPLACE    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A REPOSIT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["REPOSIT"],
+        "body": [
+        "REPOSIT    $file, $numvar"
+        ],
+        "description": "" 
+    },
+    "A RESET dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RESET"],
+        "body": [
+        "RESET    $charvar"
+        ],
+        "description": "" 
+    },
+    "A RESET to value dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RESET-to-value"],
+        "body": [
+        "RESET    $charvar TO $resetvalue"
+        ],
+        "description": "" 
+    },
+    "A RESETPARM dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RESETPARM"],
+        "body": [
+        "RESETPARM"
+        ],
+        "description": "" 
+    },
+    "A RETCOUNT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RETCOUNT"],
+        "body": [
+        "RETCOUNT    $numvar"
+        ],
+        "description": "" 
+    },
+    "A RETURN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["RETURN"],
+        "body": [
+        "RETURN"
+        ],
+        "description": "" 
+    },
+    "A ROLLOUT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["ROLLOUT"],
+        "body": [
+        "ROLLOUT    $charexp"
+        ],
+        "description": "" 
+    },
+    "A CLIENTROLLOUT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["CLIENTROLLOUTROLLOUT"],
+        "body": [
+        "CLIENTROLLOUTROLLOUT    $charexp"
+        ],
+        "description": "" 
+    },
+    "A ROTATE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["ROTATE"],
+        "body": [
+        "ROTATE    $source TO $dest"
+        ],
+        "description": "" 
+    },
+    "A SCAN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SCAN"],
+        "body": [
+        "SCAN    $source IN $destvar"
+        ],
+        "description": "" 
+    },
+    "A SCRNRESTORE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SCRNRESTORE"],
+        "body": [
+        "SCRNRESTORE    $charvar"
+        ],
+        "description": "" 
+    },
+    "A SCRNSAVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SCRNSAVE"],
+        "body": [
+        "SCRNSAVE    $charvar"
+        ],
+        "description": "" 
+    },
+    "A SCRNSIZE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SCRNSIZE"],
+        "body": [
+        "SCRNSIZE    $numvar"
+        ],
+        "description": "" 
+    },
+    "A SEARCH dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SEARCH"],
+        "body": [
+        "SEARCH    $key IN $var TO $num WITH $dest"
+        ],
+        "description": "" 
+    },
+    "A SEND dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SEND"],
+        "body": [
+        "SEND    $comfile, $numvar; $list"
+        ],
+        "description": "" 
+    },
+    "A SENDCLR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SENDCLR"],
+        "body": [
+        "SENDCLR    $comfile"
+        ],
+        "description": "" 
+    },
+    "A SET dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SET"],
+        "body": [
+        "SET    $list"
+        ],
+        "description": "" 
+    },
+    "A SETENDKEY dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SETENDKEY"],
+        "body": [
+        "SETENDKEY    $list"
+        ],
+        "description": "" 
+    },
+    "A SETFLAG dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SETFLAG"],
+        "body": [
+        "SETFLAG    ${1|EOS,EQUAL,LESS,OVER,NOT EOS,NOT EQUAL,NOT LESS,NOT OVER|}"
+        ],
+        "description": "" 
+    },
+    "A SETLPTR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SETLPTR"],
+        "body": [
+        "SETLPTR   $charvar"
+        ],
+        "description": "" 
+    },
+    "A SETLPTR to value dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SETLPTR-to-value"],
+        "body": [
+        "SETLPTR   $charvar TO $value"
+        ],
+        "description": "" 
+    },
+    "A SETNULL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SETNULL"],
+        "body": [
+        "SETNULL    $list"
+        ],
+        "description": "" 
+    },
+    "A SFORMAT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SFORMAT"],
+        "body": [
+        "SFORMAT    $dest TO $newvalue"
+        ],
+        "description": "" 
+    },
+    "A SHOW dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SHOW"],
+        "body": [
+        "SHOW    $source_res_image TO $dest_device"
+        ],
+        "description": "" 
+    },
+    "A SHOW at dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SHOW-at"],
+        "body": [
+        "SHOW    $source_res_image TO $dest_device FROM $num_horz_pos TO $num_vert_pos"
+        ],
+        "description": "" 
+    },
+    "A SHUTDOWN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SHUTDOWN"],
+        "body": [
+        "SHUTDOWN"
+        ],
+        "description": "" 
+    },
+    "A SOUND dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SOUND"],
+        "body": [
+        "SOUND    $num1 TO $num2"
+        ],
+        "description": "" 
+    },
+    "A SPLCLOSE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SPLCLOSE"],
+        "body": [
+        "SPLCLOSE    ${1|pfile,charexp,pfile\\, charexp|}"
+        ],
+        "description": "" 
+    },
+    "A SPLOPEN dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SPLOPEN"],
+        "body": [
+        "SPLOPEN    ${1|charexp,pfile\\, charexp,pfile\\, charexp1\\, charexp2|}"
+        ],
+        "description": "" 
+    },
+    "A SPLOPT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SPLOPT"],
+        "body": [
+        "SPLOPT    $charexp"
+        ],
+        "description": "" 
+    },
+    "A SQLCODE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SQLCODE"],
+        "body": [
+        "SQLCODE    $numvar"
+        ],
+        "description": "" 
+    },
+    "A SQLEXEC dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SQLEXEC"],
+        "body": [
+        "SQLEXEC    ${1|charexp,charexp FROM from-list,charexp INTO into-list,charexp FROM from-list INTO into-list|}"
+        ],
+        "description": "" 
+    },
+    "A SQLMSG dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SQLMSG"],
+        "body": [
+        "SQLMSG    $charvar"
+        ],
+        "description": "" 
+    },
+    "A SQUEEZE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SQUEEZE"],
+        "body": [
+        "SQUEEZE    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A STATERESTORE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["STATERESTORE"],
+        "body": [
+        "STATERESTORE    $charvar"
+        ],
+        "description": "" 
+    },
+    "A STATESAVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["STATESAVE"],
+        "body": [
+        "STATESAVE    $charvar"
+        ],
+        "description": "" 
+    },
+    "A STATESIZE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["STATESIZE"],
+        "body": [
+        "STATESIZE    $numvar"
+        ],
+        "description": "" 
+    },
+    "A STOP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["STOP"],
+        "body": [
+        "STOP"
+        ],
+        "description": "" 
+    },
+    "A STORE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["STORE"],
+        "body": [
+        "STORE    ${1|source IN index OF list,charexp IN device,image IN device|}"
+        ],
+        "description": "" 
+    },
+    "A STOREADR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["STOREADR"],
+        "body": [
+        "STOREADR    $adrvar IN $index OF $list_lstvar_array"
+        ],
+        "description": "" 
+    },
+    "A STORELABEL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["STORELABEL"],
+        "body": [
+        "STORELABEL    $lblvar IN index OF $list"
+        ],
+        "description": "" 
+    },
+    "A SUBTRACT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SUBTRACT"],
+        "body": [
+        "${1|SUB,SUBTRACT|}    $source FROM $dest"
+        ],
+        "description": "" 
+    },
+    "A SUBTRACT giving dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["SUBTRACT-giving"],
+        "body": [
+        "${1|SUB,SUBTRACT|}    $num1 FROM $num2 GIVING $dest"
+        ],
+        "description": "" 
+    },
+    "A TEST dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TEST"],
+        "body": [
+        "TEST    $var"
+        ],
+        "description": "" 
+    },
+    "A TESTADR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TESTADR"],
+        "body": [
+        "TESTADR    $adrvar"
+        ],
+        "description": "" 
+    },
+    "A TESTLABEL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TESTLABEL"],
+        "body": [
+        "TESTLABEL    $lblvar"
+        ],
+        "description": "" 
+    },
+    "A TRAP dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TRAP"],
+        "body": [
+        "TRAP    $prog-label IF $key_char_event"
+        ],
+        "description": "" 
+    },
+    "A TRAP giving dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TRAP-giving"],
+        "body": [
+        "TRAP    ${1:prog-label} GIVING ${2:charvar} IF ${3|RANGE,FORMAT,CFAIL,IO,SPOOL|}"
+        ],
+        "description": "" 
+    },
+    "A TRAPCLR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TRAPCLR"],
+        "body": [
+        "TRAPCLR    $key_char_event"
+        ],
+        "description": "" 
+    },
+    "A TRAPSTORE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TRAPSTORE"],
+        "body": [
+        "TRAPSTORE    $charvar"
+        ],
+        "description": "" 
+    },
+    "A TRAPSAVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TRAPSAVE"],
+        "body": [
+        "TRAPSAVE    $charvar"
+        ],
+        "description": "" 
+    },
+    "A TRAPSIZE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TRAPSIZE"],
+        "body": [
+        "TRAPSIZE    $numvar"
+        ],
+        "description": "" 
+    },
+    "A TRIM dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TRIM"],
+        "body": [
+        "TRIM    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "A TYPE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["TYPE"],
+        "body": [
+        "TYPE    ${1|charvar,var\\, numvar|}"
+        ],
+        "description": "" 
+    },
+    "An UNLINK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["UNLINK"],
+        "body": [
+        "UNLINK    $res_device"
+        ],
+        "description": "" 
+    },
+    "An UNLOAD dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["UNLOAD"],
+        "body": [
+        "UNLOAD    $charexp"
+        ],
+        "description": "" 
+    },
+    "An UNLOCK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["UNLOCK"],
+        "body": [
+        "UNLOCK    $file"
+        ],
+        "description": "" 
+    },
+    "An UNPACK dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["UNPACK"],
+        "body": [
+        "UNPACK    $source IN $dest"
+        ],
+        "description": "" 
+    },
+    "An UNPACKLIST dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["UNPACKLIST"],
+        "body": [
+        "UNPACKLIST    $lstvar IN $list"
+        ],
+        "description": "" 
+    },
+    "An UPDATAB dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["UPDATAB"],
+        "body": [
+        "UPDATAB    $file; $list"
+        ],
+        "description": "" 
+    },
+    "An UPDATE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["UPDATE"],
+        "body": [
+        "UPDATE    $file; $list"
+        ],
+        "description": "" 
+    },
+    "A WAIT dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["WAIT"],
+        "body": [
+        "WAIT"
+        ],
+        "description": "" 
+    },
+    "A WEOF dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["WEOF"],
+        "body": [
+        "WEOF    $file, $numvar"
+        ],
+        "description": "" 
+    },
+    "A WINRESTORE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["WINRESTORE"],
+        "body": [
+        "WINRESTORE    $charvar"
+        ],
+        "description": "" 
+    },
+    "A WINSAVE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["WINSAVE"],
+        "body": [
+        "WINSAVE    $charvar"
+        ],
+        "description": "" 
+    },
+    "A WINSIZE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["WINSIZE"],
+        "body": [
+        "WINSIZE    $numvar"
+        ],
+        "description": "" 
+    },
+    "A WRITE dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["WRITE"],
+        "body": [
+        "WRITE    ${1|file\\, numvar; list,ifile\\, var; list,afile\\, numvar; list,afile; list|}"
+        ],
+        "description": "" 
+    },
+    "A XOR dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["XOR"],
+        "body": [
+        "XOR    $source WITH $dest"
+        ],
+        "description": "" 
+    },
+    "An %IF compiler dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["%IF"],
+        "body": [
+        "%IF    ${1:hexcon1} ${2|>,<,>=,<=,=,<>|} ${3:hexcon2}",
+        "%ENDIF"
+        ],
+        "description": "" 
+    },
+    "An %IFZ compiler dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["%IFZ"],
+        "body": [
+        "%IFZ    $list1"
+        ],
+        "description": "" 
+    },
+    "An %IFNZ compiler dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["%IFNZ"],
+        "body": [
+        "%IFNZ    $list1"
+        ],
+        "description": "" 
+    },
+    "An %IFDEF compiler dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["%IFDEF"],
+        "body": [
+        "%IFDEF    $equate_var_list",
+        "%ENDIF"
+        ],
+        "description": "" 
+    },
+    "An %IFNDEF compiler dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["%IFNDEF"],
+        "body": [
+        "%IFNDEF    $equate_var_list",
+        "%ENDIF"
+        ],
+        "description": "" 
+    },
+    "An %IFLABEL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["%IFLABEL"],
+        "body": [
+        "%IFLABEL    $list_lblvars",
+        "%ENDIF"
+        ],
+        "description": "" 
+    },
+    "An %IFNLABEL dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["%IFNLABEL"],
+        "body": [
+        "%IFNLABEL    $list_lblvars",
+        "%ENDIF"
+        ],
+        "description": "" 
+    },
+    "An %ELSEIF dbc statement": {
+        "scope": "dbc,DBC",
+        "prefix": ["%ELSEIF"],
+        "body": [
+        "%ELSEIF    ${1:hexcon1} ${2|>,<,>=,<=,=,<>|} ${3:hexcon2}"
         ],
         "description": "" 
     }
