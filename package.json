@@ -17,7 +17,7 @@
             {
                 "id": "dbc",
                 "aliases": ["DBC", "dbc"],
-                "extensions": [".DGG",".TXT",".DEF",".VRB",".DAV",".GLE",".GWS",".AJS",".MAG"],
+                "extensions": [".DGG",".TXT",".DEF",".VRB",".DAV",".GLE",".GWS",".AJS",".MAG",".DO"],
                 "configuration": "./language-configuration.json"
             }
           ],
